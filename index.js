@@ -1,5 +1,22 @@
 /* Your Code Here */
-
+const createEmployeeRecord = function (employeeInformation) {
+    let employee = {
+        firstName: employeeInformation[0],
+        familyName: employeeInformation[1],
+        title: employeeInformation[2],
+        payPerHour: employeeInformation[3],
+        timeInEvents: [],
+        timeOutEvents: []
+    }
+    return employee
+}
+const createEmployeeRecords = function (array) {
+    let newArray = []
+    for (let line of array) {
+        newArray.push(createEmployeeRecord(line))
+    }
+    return newArray
+}
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
